@@ -27,12 +27,12 @@
 
     span {
       padding-left: 10px;
+      width: 85%;
     }
     .btns {
       display: flex;
-      position: absolute;
       gap: 5px;
-      right: 5px;
+      width: 15%;
 
       svg {
         font-size: 1.5rem;
@@ -56,9 +56,8 @@
     }
     .btns {
       display: flex;
-      position: absolute;
       gap: 5px;
-      right: 5px;
+      width: 15%;
 
       svg {
         font-size: 1.5rem;

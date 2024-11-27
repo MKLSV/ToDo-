@@ -1,0 +1,92 @@
+[
+    {
+        "_id": 1,
+        "text": "Закончить проект ToDo",
+        "isCompleted": false,
+        "createdAt": 1732490400000
+    },
+    {
+        "_id": 2,
+        "text": "Проверить почту",
+        "isCompleted": true,
+        "createdAt": 1732402200000
+    },
+    {
+        "_id": 3,
+        "text": "Купить продукты",
+        "isCompleted": false,
+        "createdAt": 1732416300000
+    },
+    {
+        "_id": 4,
+        "text": "Прочитать книгу на 20 страниц",
+        "isCompleted": false,
+        "createdAt": 1732336800000
+    },
+    {
+        "_id": 5,
+        "text": "Позвонить родителям",
+        "isCompleted": true,
+        "createdAt": 1732253700000
+    },
+    {
+        "_id": 6,
+        "text": "Забронировать билеты в кино",
+        "isCompleted": false,
+        "createdAt": 1732261800000
+    },
+    {
+        "_id": 7,
+        "text": "Написать отчет по работе",
+        "isCompleted": true,
+        "createdAt": 1732178700000
+    },
+    {
+        "_id": 8,
+        "text": "Подготовить презентацию для встречи",
+        "isCompleted": false,
+        "createdAt": 1732092000000
+    },
+    {
+        "_id": 9,
+        "text": "Убраться в квартире",
+        "isCompleted": true,
+        "createdAt": 1732072800000
+    },
+    {
+        "_id": 10,
+        "text": "Сделать зарядку утром",
+        "isCompleted": false,
+        "createdAt": 1731982200000
+    },
+    {
+        "_id": 11,
+        "text": "Встретиться с друзьями",
+        "isCompleted": true,
+        "createdAt": 1731908400000
+    },
+    {
+        "_id": 12,
+        "text": "Составить список дел на неделю",
+        "isCompleted": false,
+        "createdAt": 1731826800000
+    },
+    {
+        "_id": 13,
+        "text": "Оплатить счета за коммунальные услуги",
+        "isCompleted": false,
+        "createdAt": 1731747600000
+    },
+    {
+        "_id": 14,
+        "text": "Посетить выставку в музее",
+        "isCompleted": true,
+        "createdAt": 1731671400000
+    },
+    {
+        "_id": 15,
+        "text": "Изучить новую тему по программированию",
+        "isCompleted": false,
+        "createdAt": 1731595200000
+    }
+]

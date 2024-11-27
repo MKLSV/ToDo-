@@ -6,8 +6,8 @@
 ### 1. Клонируйте репозиторий:
 
 ```bash
-git clone <URL-репозитория>
-cd <название-папки-репозитория>
+git clone https://github.com/MKLSV/todo-app.git
+cd todo-app
 ```
 
 ### 2. Установите зависимости:

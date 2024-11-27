@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ConfirmDeleteModal from "./DeleteModal";
-import { removeTodo, saveTodo } from "../store/todo/todo.action";
+import { saveTodo } from "../store/todo/todo.action";
 
-export function TodoItem({ todo }) {
-  // const { updateTodo, deleteTodo } = useTodos();
-  const [isEditing, setIsEditing] = useState(false);
-  const [newText, setNewText] = useState(todo.text);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+import { FaRegEdit } from "react-icons/fa";
+import { TiDeleteOutline } from "react-icons/ti";
+import { MdDone } from "react-icons/md";
+
+export function TodoItem({ todo, onRemoveTodo, onUpdateTodo }) {
+  const [isEditing, setIsEditing] = useState(false)
+  const [newText, setNewText] = useState(todo.text)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   function handleUpdate() {
-    saveTodo({ ...todo, text: newText })
-    setIsEditing(false);
+    onUpdateTodo({ ...todo, text: newText })
+    setIsEditing(false)
   };
 
   function handleDelete() {
-    removeTodo(todo._id);
-    setIsModalOpen(false);
+    onRemoveTodo(todo._id)
+    setIsModalOpen(false)
   };
   function handleChecked() {
     saveTodo({ ...todo, isCompleted: !todo.isCompleted })
@@ -23,24 +26,32 @@ export function TodoItem({ todo }) {
 
 
   return (
-    <div className="todo-item">
+    <div>
 
       {isEditing ? (
-        <div>
-          <input
-            type="text"
-            value={newText}
-            onChange={(e) => setNewText(e.target.value)}
-          />
-          <button onClick={() => handleUpdate()}>Сохранить</button>
-          <button onClick={() => setIsEditing(false)}>Отмена</button>
+        <div className="todo-item">
+          <div className="edit-item">
+            <input
+              type="text"
+              value={newText}
+              onChange={(e) => setNewText(e.target.value)}
+            />
+            <div className="btns">
+              <MdDone onClick={() => handleUpdate()} />
+              <TiDeleteOutline onClick={() => setIsEditing(false)} />
+            </div>
+          </div>
         </div>
       ) : (
-        <div>
-          <input type="checkbox" onChange={() => handleChecked(todo)} checked={todo.isCompleted ? "checked" : ''} />
-          <span >{todo.text}</span>
-          <button onClick={() => setIsEditing(true)}>Редактировать</button>
-          <button onClick={() => setIsModalOpen(true)}>Удалить</button>
+        <div className="todo-item">
+          <input className="custom-radio" type="radio" onChange={() => handleChecked(todo)} checked={todo.isCompleted ? "checked" : ''} />
+          <div className="todo-container">
+            <span >{todo.text}</span>
+            <div className="btns">
+              <FaRegEdit onClick={() => setIsEditing(true)} />
+              <TiDeleteOutline onClick={() => setIsModalOpen(true)} />
+            </div>
+          </div>
         </div>
       )}
 

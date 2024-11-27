@@ -1,2 +1,11 @@
+//BASIC
+@import 'basic/base';
+
+
 // COMPONENTS
-// @import 'components/app-header';
+@import 'components/app';
+@import 'components/auth';
+@import 'components/add';
+@import 'components/list';
+@import 'components/radio';
+@import 'components/delete-modal';

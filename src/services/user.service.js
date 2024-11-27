@@ -11,20 +11,12 @@ export const userService = {
     getLoggedinUser,
     saveLocalUser,
     query,
-    getById,
-    getEmptyCredentials
 }
 
 
 
 function query() {
     return storageService.query(STORAGE_KEY_USERS)
-}
-
-
-async function getById(userId) {
-    const user = await storageService.get(STORAGE_KEY_USERS, userId)
-    return user
 }
 
 
@@ -36,7 +28,7 @@ async function login(userCred) {
             return saveLocalUser(user);
         }
         // Создаём объект ошибки для передачи корректного сообщения
-        throw new Error('Неверный логин или пароль!');
+        throw new Error('Неверный логин или пароль');
     } catch (err) {
         // Дополнительно логируем ошибку, если нужно
         throw err; // Передаём ошибку дальше
@@ -46,6 +38,7 @@ async function signup(userCred) {
     const user = await storageService.post(STORAGE_KEY_USERS, userCred)
     return saveLocalUser(user)
 }
+
 async function logout() {
     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
 }
@@ -63,11 +56,5 @@ function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
 }
 
-function getEmptyCredentials() {
-    return {
-        username: 'oren',
-        password: 123456,
-    }
-}
 
 

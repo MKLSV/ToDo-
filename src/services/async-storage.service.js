@@ -8,7 +8,7 @@ export const storageService = {
     save
 }
 
-function query(entityType, delay = 500) {
+function query(entityType, delay = 500) {  //Для симуляции асинхронности использую задержку в 500 милисекунд
     var entities = JSON.parse(localStorage.getItem(entityType)) || []
     return new Promise(resolve => setTimeout(() => resolve(entities), delay))
 }
@@ -24,7 +24,7 @@ function get(entityType, entityId) {
 function post(entityType, newEntity) {
     newEntity = {...newEntity}
     return query(entityType).then(entities => {
-        entities.push(newEntity)
+        entities.unshift(newEntity)
         save(entityType, entities)
         return newEntity
     })

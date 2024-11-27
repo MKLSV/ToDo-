@@ -1,0 +1,35 @@
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(108, 108, 108, 0.237);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal {
+  background-color: #fff;
+  padding: 15px;
+  max-width: 70%;
+  box-shadow: 0 0 20px 0 #5e5e5e;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+    button {
+      width: 30%;
+      max-width: 120px;
+      cursor: pointer;
+    }
+  }
+}

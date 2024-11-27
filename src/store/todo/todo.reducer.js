@@ -24,7 +24,7 @@ export function todoReducer(state = initialState, action) {
             return { ...state, todos }
 
         case ADD_TODO:
-            todos = [...state.todos, action.todo]
+            todos = [action.todo, ...state.todos ]
             return { ...state, todos }
 
 

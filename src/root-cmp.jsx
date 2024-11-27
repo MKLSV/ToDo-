@@ -2,7 +2,7 @@ import './assets/main.scss'
 
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-import TodoIndex from './components/TodoIndex';
+import TodoIndex from './views/TodoIndex';
 
 export default function App() {
 

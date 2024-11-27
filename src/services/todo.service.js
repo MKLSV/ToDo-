@@ -11,10 +11,6 @@ export const todoService = {
     remove,
     getEmptyTodo,
     // getDefaultFilter,
-    // getLabels,
-    // addToyMsg,
-    // removeToyMsg,
-    // getEmptyMsg
 
 }
 
@@ -34,10 +30,6 @@ async function query() {
     return data
 }
 
-async function getById(userId) {
-    const user = await storageService.get(STORAGE_KEY, userId)
-    return user
-}
 
 async function updatedTodo(todoToUpdate) {
     const todo = await storageService.put(STORAGE_KEY, todoToUpdate)
@@ -67,33 +59,6 @@ function getEmptyTodo(todo) {
         "createdAt": Date.now()
     }
 }
-
-// function getEmptyMsg() {
-//     return {
-//         id: utilService.makeId(),
-//         txt: ''
-//     }
-// }
-
-// function getLabels() {
-//     return [
-//         "On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery Powered"
-//     ]
-// }
-
-// async function addToyMsg(toyId, msg) {
-//     try {
-//         const savedMsg = await httpService.post(`toy/${toyId}/msg`, { msg })
-//         return savedMsg
-//     } catch (e) {
-//         /// do error handling
-//     }
-// }
-
-// async function removeToyMsg(toyId, msgId) {
-//     await httpService.delete(`toy/${toyId}/msg/${msgId}`)
-
-// }
 
 
 function _makeId(length = 5) {

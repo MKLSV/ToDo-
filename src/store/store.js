@@ -1,4 +1,4 @@
-import { combineReducers, compose, legacy_createStore as createStore } from 'redux'
+import { combineReducers, legacy_createStore as createStore } from 'redux'
 
 import { todoReducer } from './todo/todo.reducer.js'
 import { userReducer } from "./user/user.reducer"

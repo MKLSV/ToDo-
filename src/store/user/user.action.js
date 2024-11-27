@@ -38,19 +38,4 @@ export async function logout() {
 }
 
 
-export async function updateUser(userDetails) {
-    try {
-        const updatedUser = await userService.update(userDetails)
-        console.log('newUser', updatedUser);
-        store.dispatch({ type: SET_USER, user: updatedUser })
-        return updatedUser
-    } catch (err) {
-        console.error('Cannot checkout:', err)
-        throw err
-    }
-}
-
-
-
-
 

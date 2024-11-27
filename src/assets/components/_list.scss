@@ -1,0 +1,73 @@
+.todo-list {
+  padding-top: 25px;
+}
+
+.todo {
+  padding: 10px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  
+  &.done{
+    .todo-container{
+        span{
+            color: rgb(128, 128, 128);
+            text-decoration-line: line-through;
+        }
+    }
+  } 
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+
+  .todo-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    span {
+      padding-left: 10px;
+    }
+    .btns {
+      display: flex;
+      position: absolute;
+      gap: 5px;
+      right: 5px;
+
+      svg {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: rgb(56, 55, 55);
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  .edit-item {
+    display: flex;
+    padding-left: 35px;
+    position: relative;
+    width: 100%;
+
+    input {
+      width: 85%;
+      padding: 5px;
+    }
+    .btns {
+      display: flex;
+      position: absolute;
+      gap: 5px;
+      right: 5px;
+
+      svg {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: rgb(56, 55, 55);
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { todoService } from '../../services/todo.service'
 import { store } from '../store'
-import { ADD_TODO, REMOVE_TODO, SET_FILTER, SET_TODOS, UPDATE_TODO } from './todo.reducer'
+import { ADD_TODO, REMOVE_TODO, SET_TODOS, UPDATE_TODO } from './todo.reducer'
 
 
 export async function loadTodos() {
@@ -15,7 +15,6 @@ export async function loadTodos() {
 }
 
 export async function saveTodo(todo) {
-
     try {
         const type = (todo._id) ? UPDATE_TODO : ADD_TODO
         const savedTodo = await todoService.save(todo)

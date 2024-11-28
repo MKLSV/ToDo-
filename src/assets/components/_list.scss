@@ -19,21 +19,20 @@
 .todo-item {
   display: flex;
   justify-content: space-between;
-
+  
   .todo-container {
     display: flex;
+    justify-content: space-between;
     position: relative;
     width: 100%;
-
+    
     span {
       padding-left: 10px;
-      width: 85%;
     }
     .btns {
       display: flex;
       gap: 5px;
-      width: 15%;
-
+      
       svg {
         font-size: 1.5rem;
         cursor: pointer;
@@ -49,15 +48,15 @@
     padding-left: 35px;
     position: relative;
     width: 100%;
-
+    justify-content: space-between;
+    
     input {
-      width: 85%;
       padding: 5px;
+      width: 85%;
     }
     .btns {
       display: flex;
       gap: 5px;
-      width: 15%;
 
       svg {
         font-size: 1.5rem;
